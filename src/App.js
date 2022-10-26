@@ -9,13 +9,16 @@ class App extends Component {
     this.state = {
       monsters: [
         {
-          name: "Linda"
+          name: "Linda",
+          id: "12345"
         },
         {
-          name: "Frank"
+          name: "Frank",
+          id: "34567"
         },
         {
-          name: "Jacky"
+          name: "Jacky",
+          id: "78906"
         },
       ]
     }
@@ -25,7 +28,7 @@ class App extends Component {
       <div className="App">
         {
           this.state.monsters.map((monster)=>{
-            return <h1 key={monster.name}>{monster.name}</h1>
+            return <h1 key={monster.id}>{monster.name}</h1>
           })
         }
       </div>
