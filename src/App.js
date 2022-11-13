@@ -34,7 +34,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("render from Appjs");
 
     const { monsters, searchField, } = this.state;
     const { onSearchChange } = this;
@@ -45,13 +44,12 @@ class App extends Component {
 
     return (
       <div className="App">
+      <h1 className='app-title'>Monsters Rolodex</h1>
         <SearchBox
           onChangeHandler={onSearchChange}
           placeholder='search monsters'
           className='monsters-search-box'
         />
-        <br />
-        <input type="text" name="" id="" className='search-box'/>
         <CardList
           monsters={filteredMonsters}
         />
